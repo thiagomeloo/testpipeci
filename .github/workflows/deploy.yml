@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: pip install poetry
       - name: Install project dependencies
-        run: poetry install --without doc
+        run: poetry install
       - name: Update versino in pyproject.toml
         run: |
           sed -i "s/version = .*/version = \"$GITHUB_REF_NAME\"/g" pyproject.toml
