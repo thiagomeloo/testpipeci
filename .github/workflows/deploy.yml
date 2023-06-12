@@ -19,6 +19,8 @@ jobs:
         run: pip install poetry
       - name: Install project dependencies
         run: poetry install
+      - name: Echo
+        run: echo "teste"
       - name: Update versino in pyproject.toml
         run: |
           sed -i "s/version = .*/version = \"$GITHUB_REF_NAME\"/g" pyproject.toml
